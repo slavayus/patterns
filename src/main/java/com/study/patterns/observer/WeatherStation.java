@@ -4,11 +4,9 @@ import com.study.patterns.observer.observable.WeatherData;
 import com.study.patterns.observer.observers.CliWriter;
 import com.study.patterns.observer.observers.WebWriter;
 
-import java.util.ArrayList;
-
 public class WeatherStation {
     public static void main(String[] args) {
-        WeatherData weatherData = new WeatherData(new ArrayList<>());
+        WeatherData weatherData = new WeatherData();
 
         CliWriter cliWriter = new CliWriter(weatherData);
         WebWriter webWriter = new WebWriter(weatherData);
