@@ -8,5 +8,6 @@ public class Main {
         control.buttonWasPressed();
         control.setCommand(new StereoOffCommand(stereo));
         control.buttonWasPressed();
+        control.undoButtonWasPressed();
     }
 }

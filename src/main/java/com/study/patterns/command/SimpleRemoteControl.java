@@ -1,13 +1,17 @@
 package com.study.patterns.command;
 
-public class SimpleRemoteControl {
+class SimpleRemoteControl {
     private Command command;
 
-    public void setCommand(Command command) {
+    void setCommand(Command command) {
         this.command = command;
     }
 
-    public void buttonWasPressed() {
+    void buttonWasPressed() {
         command.execute();
+    }
+
+    void undoButtonWasPressed() {
+        command.undo();
     }
 }

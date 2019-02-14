@@ -1,19 +1,27 @@
 package com.study.patterns.command;
 
-public class Stereo {
-    public void on() {
+class Stereo {
+
+    private int volume;
+
+    void on() {
         System.out.println("Stereo is on");
     }
 
-    public void off() {
+    void off() {
         System.out.println("Stereo is off");
     }
 
-    public void setCd() {
+    void setCd() {
         System.out.println("Stereo is set for CD input");
     }
 
-    public void setVolume(int volume) {
-        System.out.println("Stereo volume is: " + volume);
+    void setVolume(int volume) {
+        this.volume = volume;
+        System.out.println("Stereo volume is: " + this.volume);
+    }
+
+    int getVolume() {
+        return volume;
     }
 }
